@@ -1,0 +1,25 @@
+{
+  "name": "movie-magic_js_backend",
+  "version": "1.0.0",
+  "description": "SoftUni JS Back-End Course Workshop",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppenkof/movie-magic_JS_Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ppenkof/movie-magic_JS_Backend/issues"
+  },
+  "homepage": "https://github.com/ppenkof/movie-magic_JS_Backend#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
