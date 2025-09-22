@@ -21,6 +21,7 @@
   "homepage": "https://github.com/ppenkof/movie-magic_JS_Backend#readme",
   "dependencies": {
     "express": "^5.1.0",
-    "express-handlebars": "^8.0.3"
+    "express-handlebars": "^8.0.3",
+    "uuid": "^13.0.0"
   }
 }
