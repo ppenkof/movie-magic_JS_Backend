@@ -1,8 +1,6 @@
 # movie-magic_JS_Backend
 SoftUni JS Back-End Course Workshop
-
 ## Development Steps
-
 ### Setup
  - [x] Initialize Project
  - [x] Add Express Server `npm i express`
