@@ -65,11 +65,12 @@ export default class Movie{
       }
 
       if(filter.genre){
-        //todo search by genre, exact match, case insensitive  
+        //Search by genre, exact match, case insensitive  
+        result = result.filter(m => m.genre.toLowerCase() == filter.genre.toLowerCase());
       }
 
       if(filter.year){
-        //todo search by year, exact match
+        //Search by year, exact match
         result = result.filter(m => m.year == filter.year);
       }
 
