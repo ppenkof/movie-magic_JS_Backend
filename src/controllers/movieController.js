@@ -11,7 +11,7 @@ movieController.post('/create', (req, res) => {
     const movieData = req.body;
     movieService.create(movieData);
     console.log(movie.title);
-    res.end();
+    res.redirect('/');
 });
 
 export default movieController;
