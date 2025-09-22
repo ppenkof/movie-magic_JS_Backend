@@ -6,5 +6,9 @@ const routes = Router();
 
 routes.use(homeController);
 routes.use('/movies', movieController);
+//Add not found page 404
+routes.get('/*splat', (req, res) => {
+    res.render('404');
+});
 
 export default routes;
