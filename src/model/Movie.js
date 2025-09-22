@@ -61,7 +61,8 @@ export default class Movie{
        }
 
       if(filter.title){
-        //todo search by title, partial match, case insensitive
+        //Search by title, partial match, case insensitive
+        result = result.filter(m => m.title.toLowerCase().includes(filter.title.toLowerCase()));
       }
 
       if(filter.genre){
