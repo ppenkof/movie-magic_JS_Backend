@@ -59,6 +59,20 @@ export default class Movie{
       if(filter._id){
         result= movies.find(m => m._id == filter._id);
        }
+
+      if(filter.title){
+        //todo search by title, partial match, case insensitive
+      }
+
+      if(filter.genre){
+        //todo search by genre, exact match, case insensitive  
+      }
+
+      if(filter.year){
+        //todo search by year, exact match
+        result = result.filter(m => m.year == filter.year);
+      }
+
         return result;
     }
 

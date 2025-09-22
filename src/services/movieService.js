@@ -2,8 +2,8 @@ import { create } from "express-handlebars";
 import Movie from "../model/Movie.js";
 
 export default {
-    getAll(){
-        return Movie.find();    
+    getAll(filter){
+        return Movie.find(filter);    
     },
 
     getOne(movieId){
