@@ -15,7 +15,10 @@ export default {
 
     create(movieData){
         movieData.rating = Number(movieData.rating);
-        const movie = new Movie(movieData);
-        return movie.save();
+        // const movie = new Movie(movieData);
+        // return movie.save();
+        
+        //MongoDb method
+        return Movie.create(movieData);
     }
 };
