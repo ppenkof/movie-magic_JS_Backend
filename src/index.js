@@ -19,7 +19,13 @@ catch(err) {
 }
 
 // Setup Handlebars as the view engine
-app.engine('hbs', handbars.engine({extname: '.hbs'}));
+app.engine('hbs', handbars.engine({
+    extname: '.hbs',
+    runtimeOptions: {
+        allowProtoPropertiesByDefault: true,
+        allowProtoMethodsByDefault: true,
+    }   
+}));
 
 app.set('view engine', 'hbs');
 app.set('views', 'src/views');
