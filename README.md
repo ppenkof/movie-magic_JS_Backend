@@ -49,9 +49,22 @@ SoftUni JS Back-End Course Workshop
  - [x] Rating (temp solution)
  - [x] File Persistance
 
+## Workshop part 2 - MongoDB Database
+
+### Prerequisites
+ - [x] Install MongoDB Community Server
+ - [x] Install Compass GUI
+ - [x] Install Mongosh CLI (Optional)
+
+### Setup DB
+- [ ] Install mongoose and connect to DB
+- [ ] 
+
+### Refactor Movies to use mongoose
+- [ ] Add movie model
 
 
-
+- [ ] Add new resources
 
 
 
