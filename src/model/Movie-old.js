@@ -44,7 +44,7 @@ export default class Movie{
     }
 
     get id(){
-      return this._id;  
+      return this._id.toString();   
     }
 
     async save(){
