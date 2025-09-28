@@ -57,7 +57,7 @@ SoftUni JS Back-End Course Workshop
  - [x] Install Mongosh CLI (Optional)
 
 ### Setup DB
-- [ ] Install mongoose and connect to DB
+- [x] Install mongoose and connect to DB
 - [ ] 
 
 ### Refactor Movies to use mongoose
