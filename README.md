@@ -61,10 +61,11 @@ SoftUni JS Back-End Course Workshop
 - [x] Connect to DB
 
 ### Refactor Movies to use mongoose
-- [ ] Add movie model
+- [x] Add movie model
   - [x] Create movie schema
   - [X] Movie model
-  
+- [x] Refactor movie service
+
 
 
 - [ ] Add new resources

@@ -1,5 +1,5 @@
 import { create } from "express-handlebars";
-import Movie from "../model/Movie-old.js";
+import Movie from "../model/Movie.js";
 
 export default {
     getAll(filter){
