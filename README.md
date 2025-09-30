@@ -72,6 +72,7 @@ SoftUni JS Back-End Course Workshop
 - [x] Refactor search
 
 ### Add cast
+
 - [x] Add new resources
 - [x] Create Cast Controller
 - [x] Create Cast Page
@@ -80,16 +81,15 @@ SoftUni JS Back-End Course Workshop
 - [x] Create Cast Functionality
 
 
-### Attach Cast to Movie
+### Attach Cast to Movie (relation)
 
-### Show Cast on Details
+-[x] Add attach cast button
+-[ ] Add attach cast page
+-[ ] Add relation between cast and movie
+-[ ] Attach cast functionality
+-[ ] Add movie views to a folder
 
-
-
-
-
-
-- [ ] Add new resources
+### Show Cast on Details (population)
 
 
 ### Bonuses 
