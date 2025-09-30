@@ -75,7 +75,7 @@ SoftUni JS Back-End Course Workshop
 - [x] Add new resources
 - [x] Create Cast Controller
 - [x] Create Cast Page
-- [ ] Add Cast model
+- [x] Add Cast model
 - [ ] Create Cast Service
 - [ ] Create Cast Functionality
 
@@ -91,6 +91,10 @@ SoftUni JS Back-End Course Workshop
 
 - [ ] Add new resources
 
+
+### Bonuses 
+- [ ] Env variable
+- [ ] Name in movie
 
 
 
