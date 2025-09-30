@@ -43,5 +43,13 @@ export default {
 
         //MongoDb method
         return Movie.create(movieData);
+    },
+
+    async attach(movieId, castId){
+        const movie = await Movie.findById(movieId);
+        movie.casts.push(castId);
+
+        return movie.save();
     }
+
 };
