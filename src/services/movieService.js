@@ -2,7 +2,7 @@ import { create } from "express-handlebars";
 import Movie from "../model/Movie.js";
 
 export default {
-    getAll(filter){
+    getAll(filter={}){
         //const resultObj = query.map(m => m.toObject());
         //const query = await Movie.find(filter).lean();
         let query = Movie.find(filter);
