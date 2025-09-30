@@ -2,9 +2,9 @@ import { Router } from "express";
 
 const castController = Router();
 
-castController.get('/', (req, res) => {
-    res.end();
-    //res.render('cast', { pageTitle: 'Cast Page' });
+castController.get('/create', (req, res) => {
+   
+    res.render('casts/create', { pageTitle: 'Cast Page' });
 });
 
 export default castController;
