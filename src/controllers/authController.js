@@ -10,7 +10,7 @@ authController.get('/register', (req, res) => {
 authController.post('/register', async (req, res) => {
     const userData = req.body;  
     await authService.register(userData);
-    res.redirect('/');
+    res.redirect('/login');
 });
 
 authController.get('/login', (req, res) => {
@@ -19,9 +19,12 @@ authController.get('/login', (req, res) => {
 });
 
 authController.post('/login', async (req, res) => {
+    
     const { email, password } = req.body;
     const token = await authService.login(email, password);
-    res.end();
+    res.cookie('auth', token);
+     
+    res.redirect('/');
 });
 
 export default authController;
