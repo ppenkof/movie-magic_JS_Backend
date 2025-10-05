@@ -125,7 +125,7 @@ SoftUni JS Back-End Course Workshop
 - [x] Handle login
   - [x] Validate user
   - [x] Validate password
-  - [ ] Create token
+  - [x] Create token
   
 
 

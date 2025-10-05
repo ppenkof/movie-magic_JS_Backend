@@ -20,8 +20,8 @@ authController.get('/login', (req, res) => {
 
 authController.post('/login', async (req, res) => {
     const { email, password } = req.body;
-    await authService.login(email, password);
-    res.redirect('/');
+    const token = await authService.login(email, password);
+    res.end();
 });
 
 export default authController;
