@@ -64,7 +64,7 @@ SoftUni JS Back-End Course Workshop
 - [x] Add movie model
   - [x] Create movie schema
   - [X] Movie model
-- [x] Import file movies to database
+- [x] Import file movies to database !DON"T Import IDs
 - [x] Fix own property handlebars problem with lean method
 - [x] General fix for own property problem
 - [x] Refactor details
@@ -106,4 +106,17 @@ SoftUni JS Back-End Course Workshop
 - [ ] Back refference from vscode
 - [ ] Add movie views to a folder
 
+## Workshop 3 - Session and Authentication
 
+### Initial Setup
+ - [x] Add resources
+
+### Registration
+- [ ] Add new controller 'authController'
+- [ ] Add registration page
+- [ ] Add User model
+- [ ] Add User service
+- [ ] Handle registration (create user in DB)
+- [ ] Add password hashing
+
+### Login
