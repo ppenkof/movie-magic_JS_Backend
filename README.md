@@ -135,6 +135,10 @@ SoftUni JS Back-End Course Workshop
 
 ### Authorization
 
+- [ ] Add auth middleware
+- [ ] Validate user authentication
+- [ ] 
+
 ## Dynamic navigation
 
 ### Delete movies
