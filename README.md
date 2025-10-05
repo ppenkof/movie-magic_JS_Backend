@@ -94,7 +94,7 @@ SoftUni JS Back-End Course Workshop
 
 -[x] Get movie casts filtered
 -[x] Show casts on details
--[ ] Using population
+-[ ] Get movie cast using population
 
 
 
