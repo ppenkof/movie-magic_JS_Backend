@@ -121,10 +121,10 @@ SoftUni JS Back-End Course Workshop
 
 ### Login
 
-- [ ] Add login page
-- [ ] Handle login
-  - [ ] Validate user
-  - [ ] Validate password
+- [x] Add login page
+- [x] Handle login
+  - [x] Validate user
+  - [x] Validate password
   - [ ] Create token
   
 
