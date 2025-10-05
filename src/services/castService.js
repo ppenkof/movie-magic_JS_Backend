@@ -10,6 +10,9 @@ export default {
             query = query.find({'_id': {$in: filter.includes}}) // MongoDB $in operator
         }
 
+        if(filter.excludes){
+            query = query.nin('_id', filter.excludes); // Mongoose $nin operator
+        }
         return query;
     },
     create(castData) {
