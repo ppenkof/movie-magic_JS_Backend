@@ -25,11 +25,21 @@ export default function authMiddleware(req, res, next) {
 }
 
 export function isAuth(req, res, next) {
-  
+
     if (!req.isAuthenticated) {
       res.redirect('/auth/login');
     }
     
-  return next();
+  next();
+
+}
+
+export function isGuest(req, res, next) {
+  
+  if (req.isAuthenticated) {
+    res.redirect('/');
+  }
+  
+ next();
 
 }
