@@ -135,9 +135,10 @@ SoftUni JS Back-End Course Workshop
 
 ### Authorization
 
-- [ ] Add auth middleware
-- [ ] Validate user authentication
-- [ ] 
+- [x] Install auth cookie parser
+- [x] Add auth middleware
+- [ ] Add route guard
+
 
 ## Dynamic navigation
 

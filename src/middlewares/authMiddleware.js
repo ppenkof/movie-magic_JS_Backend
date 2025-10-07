@@ -13,6 +13,7 @@ export default function authMiddleware(req, res, next) {
         // Attach authenticated user to request
         req.user = decodedToken;
         req.isAuthenticated = true;
+        //Valid user
         next();
     }   
     catch (err) {
@@ -20,5 +21,15 @@ export default function authMiddleware(req, res, next) {
         res.clearCookie('auth');
         res.redirect('/auth/login');
     }
+
+}
+
+export function isAuth(req, res, next) {
+  
+    if (!req.isAuthenticated) {
+      res.redirect('/auth/login');
+    }
+    
+  return next();
 
 }
