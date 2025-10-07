@@ -24,9 +24,10 @@ movieController.get('/:movieId/details', async (req, res) => {
     //prepare view data - temp solution
     const ratinigViewData = '&#x2605'.repeat(Math.trunc(movie.rating));
 
-    const isCreator = 
+    //const isCreator = req.user?.id && movie.creator == req.user.id;
+    const isCreator = movie.creator && movie.creator.equals(req.user?.id);
 
-    res.render('movies/details', { movie, ratinig: ratinigViewData}); 
+    res.render('movies/details', { movie, ratinig: ratinigViewData, isCreator}); 
 });
 
 movieController.get('/search', async (req, res) => {
