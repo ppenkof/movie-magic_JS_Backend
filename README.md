@@ -146,6 +146,12 @@ SoftUni JS Back-End Course Workshop
 - [x] Group navigation by user type (all, authenticated and guest)
 - [x] Add auth info to handlebars context
 
+### Show creator control buttons
+
+ - [ ] Add edit and delete buttons on details page
+ - [ ] Add creator as relation to movies
+ - [ ] Add user as creator on movie create
+ - [ ] Show buttons only for creators
 
 ### Delete movies
 

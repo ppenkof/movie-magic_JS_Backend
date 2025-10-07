@@ -6,7 +6,7 @@ import { isAuth } from "../middlewares/authMiddleware.js";
 const movieController = Router();
 
 movieController.get('/create', isAuth, (req, res) => {
-    res.render('create');
+    res.render('movies/create');
 });
 
 movieController.post('/create', isAuth, async (req, res) => {
@@ -23,7 +23,7 @@ movieController.get('/:movieId/details', async (req, res) => {
     //prepare view data - temp solution
     const ratinigViewData = '&#x2605'.repeat(Math.trunc(movie.rating));
 
-    res.render('details', { movie, ratinig: ratinigViewData}); 
+    res.render('movies/details', { movie, ratinig: ratinigViewData}); 
 });
 
 movieController.get('/search', async (req, res) => {
