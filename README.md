@@ -155,6 +155,9 @@ SoftUni JS Back-End Course Workshop
 
 ### Delete movies
 
+ - [x] Add delete action
+ - [ ] Add creator validation
+
 ### Edit movies
 
   
