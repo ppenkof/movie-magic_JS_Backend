@@ -42,13 +42,17 @@ export default {
       return this.getOne(movieId).populate('casts');
   },
 
-    create(movieData){
-        movieData.rating = Number(movieData.rating);
+    create(movieData, userId){
+        //movieData.rating = Number(movieData.rating);
         // const movie = new Movie(movieData);
         // return movie.save();
 
         //MongoDb method
-        return Movie.create(movieData);
+        return Movie.create({
+          ...movieData, 
+          rating: Number(movieData.rating), 
+          creator: userId
+        });
     },
 
     async attach(movieId, castId){
