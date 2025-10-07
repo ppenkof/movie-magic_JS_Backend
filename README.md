@@ -161,7 +161,7 @@ SoftUni JS Back-End Course Workshop
 ### Edit movies
 
 - [x] Add edit page
-- [ ] Add dynamic movie data to edit page
+- [x] Add dynamic movie data to edit page
 - [ ] Handle edit movie
   
 ### Bonus
@@ -169,5 +169,7 @@ SoftUni JS Back-End Course Workshop
 - [ ] Automatic login on register
 - [ ] Invalidate token on logout
 - [ ] Refresh token
+- [ ] Edit categories
+
 
 
