@@ -171,6 +171,12 @@ SoftUni JS Back-End Course Workshop
 - [ ] Invalidate token on logout
 - [ ] Refresh token
 
+## Workshop 4 - Validation and Error Handling
+
+- [x] Add resources
+
+### Validation
+- [x] Validate movie
 
 
 
