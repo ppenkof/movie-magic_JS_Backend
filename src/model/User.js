@@ -6,13 +6,25 @@ const userSchema = new Schema({
         type: String, 
         required: true,
         unique: [true, 'Email already exists'],
+        match: [/[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/],
+        minLength: [10, 'Email must be at least 10 characters long'],
     },
     password: { 
         type: String, 
-        required: true,
-        
+        required: [true, 'Password is required'],
+        minLength: [6, 'Password must be at least 6 characters long'],
+        match: [/^[a-zA-Z0-9]+$/]
     },
 });
+
+// userSchema.pre('validate', async function() {
+//     if(this.isNew){
+//         const userExists = await this.constructor.exists({email: this.email});
+//         if(userExists) {
+//             throw new Error('Email already exists!');
+//         }
+//     }
+// });
 
 userSchema.pre("save", async function() {
     //Generate sald

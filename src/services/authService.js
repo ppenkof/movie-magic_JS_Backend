@@ -5,6 +5,7 @@ import { generateAuthToken } from '../utils/tokenUtils.js';
 export default {
 
     async register(userData) {
+        // Check if email already exists
         const userExists = await User.exists({email: userData.email});
         if(userExists) {
             throw new Error('Email already exists!');
