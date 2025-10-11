@@ -4,7 +4,6 @@ const movieSchema = new Schema({
     title: {
         type: String,
         required: [true, 'Movie title is required'],
-        unique: true,
         minlength: [5, 'Title is too short'],
         match: [/^[a-zA-Z0-9 ]+$/, 'Title has some invalid characters'],
     },
