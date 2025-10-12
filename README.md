@@ -196,15 +196,13 @@ SoftUni JS Back-End Course Workshop
 - [x] Error handling on  movie edit page
 - [x] Fix movie category on edit
 
-
-
-
 ### Bonuses 
 
-- [ ] Bonus: Redirect with message
-- [ ] Guard edit from non creator
+- [x] Guard edit from non creator
+- [ ] Redirect with message
 - [ ] Dynamic year check
 - [ ] Character name
+- [ ] Add more password validations
 
 
 
