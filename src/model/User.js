@@ -17,6 +17,22 @@ const userSchema = new Schema({
     },
 });
 
+//Validate password on user creation
+userSchema.virtual('rePassword')
+    .get(function() {
+        return this._rePassword;
+    })
+    .set(function(value) {
+        this._rePassword = value;
+    });
+
+userSchema.pre('validate', function() {
+    if(this.isNew && this.password !== this.rePassword) {
+        this.invalidate('rePassword', 'Passwords do not match!');
+    }
+});
+
+//Validate unique email on user creation
 // userSchema.pre('validate', async function() {
 //     if(this.isNew){
 //         const userExists = await this.constructor.exists({email: this.email});

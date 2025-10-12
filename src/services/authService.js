@@ -11,6 +11,10 @@ export default {
             throw new Error('Email already exists!');
         }
 
+        // if(userData.password !== userData.rePassword) {
+        //     throw new Error('Passwords do not match!');
+        // }
+
         const user = await User.create(userData);
         const token = generateAuthToken(user);
 
