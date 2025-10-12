@@ -198,6 +198,7 @@ SoftUni JS Back-End Course Workshop
 
 ### Bonuses 
 
+- [ ] Dynamic page title advanced solution
 - [x] Guard edit from non creator
 - [ ] Redirect with message
 - [ ] Dynamic year check
