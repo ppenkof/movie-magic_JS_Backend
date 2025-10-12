@@ -43,7 +43,12 @@ movieController.get('/:movieId/details', async (req, res) => {
         res.render('movies/details', { movie, ratinig: ratinigViewData, isCreator}); 
     }
     catch(error){
-        res.redirect('/404');   
+        // 31 Redirect without message (not recommended)
+        //res.redirect('/404');   
+        // #2 Render error page(url not modified)
+        res.render('404', { error: 'Movie not found!' });
+        // #3 Redirect with message url changed
+
     }
 });
 

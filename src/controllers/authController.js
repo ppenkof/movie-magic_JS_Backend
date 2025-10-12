@@ -34,12 +34,14 @@ authController.get('/login', isGuest, (req, res) => {
 authController.post('/login', isGuest, async (req, res) => {
 
     const { email, password } = req.body;
+    console.log(email, password);
 
     try {
         const token = await authService.login(email, password);
         res.cookie('auth', token);
         res.redirect('/');
     } catch (error) {
+        res.clearCookie('auth');
         const errorMessage = getErrorMessage(error);
         res.status(400).render('auth/login', { error: errorMessage, user: { email } });
     }

@@ -198,6 +198,7 @@ SoftUni JS Back-End Course Workshop
 
 ### Bonuses 
 
+- [ ] Bonus: Redirect with message
 - [ ] Guard edit from non creator
 - [ ] Dynamic year check
 - [ ] Character name
