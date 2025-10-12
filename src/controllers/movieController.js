@@ -3,6 +3,7 @@ import movieService from "../services/movieService.js";
 import castService from "../services/castService.js";
 import { isAuth } from "../middlewares/authMiddleware.js";
 import { get } from "mongoose";
+import { getErrorMessage } from "../utils/errorUtils.js";
 
 const movieController = Router();
 
@@ -19,10 +20,12 @@ movieController.post('/create', isAuth, async (req, res) => {
         res.redirect('/');
     } catch (error) {
         const errorMessage = getErrorMessage(error);
-        res.status(400).render('movies/create', { error: errorMessage, movie: movieData });
+        res.status(400).render('movies/create', { 
+            error: errorMessage, 
+            movie: movieData, 
+            categories: getMovieCategoryViewData(movieData.category) 
+        });
     }
-    
-   
     
 });
 
