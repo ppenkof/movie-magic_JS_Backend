@@ -179,11 +179,17 @@ SoftUni JS Back-End Course Workshop
 - [x] Validate movie
 - [x] Validate cast
 - [x] Validate user
+- [x] Bonus: Validate passwords in model
 
+### Error Handling
+
+- [x] Add static Error notification container
+- [x] User register error handling
 
 
 ### Bonuses 
 
 - [ ] Dynamic year check
 - [ ] Character name
+
 
