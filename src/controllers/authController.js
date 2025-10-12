@@ -17,7 +17,11 @@ authController.post('/register', isGuest ,async (req, res) => {
     res.redirect('/');
 
     } catch (error) {
-        const errorMessage = Object.values(error.errors)[0].message;
+        
+        let errorMessage = error.message;
+        if (error.name === 'ValidationError') {
+            errorMessage = Object.values(error.errors)[0].message;
+        }
         res.status(400).render('auth/register', { error: errorMessage, user: userData});
     }
     
