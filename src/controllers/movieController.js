@@ -31,15 +31,20 @@ movieController.post('/create', isAuth, async (req, res) => {
 
 movieController.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId;
-    const movie = await movieService.getOneDetailed(movieId);
-    
-    //prepare view data - temp solution
-    const ratinigViewData = '&#x2605'.repeat(Math.trunc(movie.rating));
+    try{
+        const movie = await movieService.getOneDetailed(movieId);
+        
+        //prepare view data - temp solution
+        const ratinigViewData = '&#x2605'.repeat(Math.trunc(movie.rating));
 
-    //const isCreator = req.user?.id && movie.creator == req.user.id;
-    const isCreator = movie.creator && movie.creator.equals(req.user?.id);
+        //const isCreator = req.user?.id && movie.creator == req.user.id;
+        const isCreator = movie.creator && movie.creator.equals(req.user?.id);
 
-    res.render('movies/details', { movie, ratinig: ratinigViewData, isCreator}); 
+        res.render('movies/details', { movie, ratinig: ratinigViewData, isCreator}); 
+    }
+    catch(error){
+        res.redirect('/404');   
+    }
 });
 
 movieController.get('/search', async (req, res) => {
