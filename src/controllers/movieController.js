@@ -2,6 +2,7 @@ import { Router } from "express";
 import movieService from "../services/movieService.js";
 import castService from "../services/castService.js";
 import { isAuth } from "../middlewares/authMiddleware.js";
+import { get } from "mongoose";
 
 const movieController = Router();
 
@@ -12,9 +13,17 @@ movieController.get('/create', isAuth, (req, res) => {
 movieController.post('/create', isAuth, async (req, res) => {
     const movieData = req.body;
     const userId = req.user.id;
-    await movieService.create(movieData, userId);
+
+    try {
+        await movieService.create(movieData, userId);
+        res.redirect('/');
+    } catch (error) {
+        const errorMessage = getErrorMessage(error);
+        res.status(400).render('movies/create', { error: errorMessage, movie: movieData });
+    }
+    
    
-    res.redirect('/');
+    
 });
 
 movieController.get('/:movieId/details', async (req, res) => {
