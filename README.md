@@ -191,8 +191,7 @@ SoftUni JS Back-End Course Workshop
 - [x] User login error handling
 - [x] Create movie error handling
 - [x] Bonus: Retain movie category after error
-
-
+- [x] Create cast error handling
 
 
 
