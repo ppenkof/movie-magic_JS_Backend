@@ -8,7 +8,7 @@ import { getErrorMessage } from "../utils/errorUtils.js";
 const movieController = Router();
 
 movieController.get('/create', isAuth, (req, res) => {
-    res.render('movies/create');
+    res.render('movies/create', { categories: getMovieCategoryViewData()});
 });
 
 movieController.post('/create', isAuth, async (req, res) => {
