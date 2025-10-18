@@ -6,6 +6,8 @@ import routes from './routes.js';
 import cookieParser from 'cookie-parser';
 import authMiddleware from './middlewares/authMiddleware.js';
 import pageHelpers from './helpers/pageHelpers.js';
+import session from 'express-session';  
+import { tempDataMiddleware } from './middlewares/tempDataMiddleware.js';
 
 
 const app = express();
@@ -33,6 +35,7 @@ app.engine('hbs', handbars.engine({
     } 
 }));
 
+
 app.set('view engine', 'hbs');
 app.set('views', 'src/views');
 
@@ -45,6 +48,17 @@ app.use(cookieParser());
 
 //Auth Middleware   
 app.use(authMiddleware);
+
+//Express Sesison
+app.use(session({
+    secret: 'JHiausjhdikasjhd3u7ia78dh73uida3789h7d3a78o3hd783d78a3h87a3h7d8ha38diauhd7i3uhd3',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false }
+}));
+
+//Add tempData middleware
+app.use(tempDataMiddleware);
 
 //Routes
 app.use(routes);

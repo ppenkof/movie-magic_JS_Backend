@@ -198,9 +198,9 @@ SoftUni JS Back-End Course Workshop
 
 ### Bonuses 
 
-- [ ] Dynamic page title advanced solution
+- [x] Dynamic page title using handlebars helper
 - [x] Guard edit from non creator
-- [ ] Redirect with message
+- [x] Redirect with message
 - [ ] Dynamic year check
 - [ ] Character name
 - [ ] Add more password validations
