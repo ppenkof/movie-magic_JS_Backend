@@ -36,6 +36,8 @@ export default {
 
         // Create token
         const token = generateAuthToken(user);
+
+        return token;
     }
 
 }

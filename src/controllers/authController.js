@@ -41,7 +41,7 @@ authController.post('/login', isGuest, async (req, res) => {
         res.cookie('auth', token);
         res.redirect('/');
     } catch (error) {
-        res.clearCookie('auth');
+       
         const errorMessage = getErrorMessage(error);
         res.status(400).render('auth/login', { error: errorMessage, user: { email } });
     }
